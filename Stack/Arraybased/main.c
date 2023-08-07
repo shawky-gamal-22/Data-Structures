@@ -8,5 +8,5 @@ int main()
     StackEntry m = 'x' ;
     Push(m , &s) ;
     Push(m,&s) ;
-
+    return 0 ;
 }
