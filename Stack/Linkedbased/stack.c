@@ -14,10 +14,10 @@ void Push(StackEntry item, Stack *ps){
 	ps->sizee ++ ;
 }
 
-void Pop(StackEntry *pitem, Stack *ps){
+void Pop(StackEntry *pi, Stack *ps){
 	StackNode *p;
 
-	*pitem=ps->top->entry;
+	*pi=ps->top->entry;
 	p=ps->top;
 	ps->top=ps->top->next;
 	free(p);
@@ -37,11 +37,11 @@ void CreateStack (Stack *ps){
 	ps->sizee =0 ;
 }
 
-void StackTop(StackEntry *pitem, Stack *ps){
-	*pitem=ps->top->entry;
+void StackTop(StackEntry *pi, Stack *ps){
+	*pi=ps->top->entry;
 }
 
-int	StackSize(Stack *ps){
+int StackSize(Stack *ps){
     return ps->sizee ;
 }
 
@@ -55,8 +55,8 @@ void ClearStack(Stack *ps){
 	ps->sizee = 0 ;
 }
 
-void TraverseStack(Stack *ps, void (*pvisit)(StackEntry)){
+void TraverseStack(Stack *ps, void (*pf)(StackEntry)){
 	for(StackNode *p=ps->top; p; p=p->next)
-		(*pvisit)(p->entry);
+		(*pf)(p->entry);
 
 }
