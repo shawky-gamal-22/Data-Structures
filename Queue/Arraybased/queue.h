@@ -19,4 +19,4 @@ int QueueFull(Queue *);
 void CreateQueue(Queue *);
 int QueueSize(Queue *);
 void ClearQueue	(Queue *);
-void TraverseQueue	(Queue *, void (*)(QueueEntry));
+void TraverseQueue(Queue *, void (*)(QueueEntry));
