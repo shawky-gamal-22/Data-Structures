@@ -12,7 +12,7 @@ void CreatQueue (Queue *pq){
 }
 
 void Append (QueueEntry item , Queue *pq){
-
+    // Appling Circular Adding
     pq->rear = (pq->rear +1) % MAXQUEUE ;
     pq->entry[pq->rear] =item ;
     pq->sizee ++ ;
