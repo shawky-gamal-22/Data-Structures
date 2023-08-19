@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "queue.c"
+#include "queue.h"
 int main()
 {
     Queue q ;
     CreateQueue(&q) ;
     Append('x',&q) ;
     int siz = QueueSize(&q) ;
-    printf(siz) ;
+    printf("%d",siz) ;
     return 0;
 }
