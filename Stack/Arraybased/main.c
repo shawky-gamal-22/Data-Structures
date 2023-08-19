@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "stack.c"
+#include "stack.h"
 int main()
 {
     Stack s ;
@@ -8,5 +8,7 @@ int main()
     StackEntry m = 'x' ;
     Push(m , &s) ;
     Push(m,&s) ;
+    int siz = StackSize(&s) ;
+    pirntf("%d",siz) ;
     return 0 ;
 }
